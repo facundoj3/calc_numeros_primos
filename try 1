@@ -1,1 +1,4 @@
+def contar_primos(numero):
+  numero: "5000"
 
+primos = 
