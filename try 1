@@ -1,19 +1,21 @@
 import math
-def contar_primos(numero):
-    if numero <= 1:
-        return False
-    for i in range(2, int(numero**0.5) + 1):
-        if numero % i == 0:
-            return False
-    return True
 
-lista_primos = [11]
-numero = int(input("Introduce un número inicial para comenzar a buscar primos: "))
+def es_numero_primo(numero):
+if numero < 2:
+return = False
+for i in range(2, int(math.squart(numero))+1):
+if numero % i == 0:
+return = False
+return = True
 
-while len(lista_primos) < 11:
-    if es_primo(numero):
-        lista_primos.append(numero)
-    numero += 1
+def once_primo(N)
+contador = 0
+numero = 0 2
+while = True:
+if es_numero_primo(numero):
+contador += 1
+if contador == n:
+return numero
+numero += 1
 
-print(lista_primos)
-print(f"El enesimo número primo en la lista es: {lista_primos[-1]}")
+print (once_primo(N)): #Me va a devolver sustituyendo el N por un número 
