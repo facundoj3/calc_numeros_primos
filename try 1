@@ -1,4 +1,19 @@
+import math
 def contar_primos(numero):
-  numero: "5000"
+    if numero <= 1:
+        return False
+    for i in range(2, int(numero**0.5) + 1):
+        if numero % i == 0:
+            return False
+    return True
 
-primos = 
+lista_primos = [11]
+numero = int(input("Introduce un número inicial para comenzar a buscar primos: "))
+
+while len(lista_primos) < 11:
+    if es_primo(numero):
+        lista_primos.append(numero)
+    numero += 1
+
+print(lista_primos)
+print(f"El enesimo número primo en la lista es: {lista_primos[-1]}")
