@@ -1,0 +1,23 @@
+import math                    #Se puede importar una lib, importe math porque necesito la formula de raiz cuadrada sqrt.
+
+def es_numero_primo(numero):   #Lo tome como crear una receta de nombre "es_numero_primo" que va a tener como ingrediente algo que se llama "numero".
+  if numero < 2:               #Como condicion puse que cualquier numero menor que dos no puede ser.
+    return False               #Agregandole un false, porque todo numero menor que dos no puede ser primo, sacando al uno.
+  for i in range(2, int(math.sqrt(numero))+1): #Aca digo que voy a revisar todos los numeros desde 2 hasta la raiz cuadrada del "numero"(ingrediente). Elijo la raiz cuadrada porque cualquier numero grande que no sea primo tiene algo que lo divide, un divisor, antes de su raiz cuadrada.
+    if numero % i == 0:        #Si el numero se puede dividir sin dejar un resto por algun numero entre 2 y la sqrt. del "numero", porque si un numero lo divide sin que sobre nada, no es un numero primo.
+      return False             #Agrego False porque se que no es primo
+  return True                  #Por lo tanto, si cumple con las dos condiciones que puse (que no se pueda dividir por ningun numero entre 2 y su sqrt., es numero primo  
+
+def once_primo(N):            #Aca, otra receta con el nombre "once_primo" que va a buscar el 'enesimo numero primo' del ingrediente que ahora es "N".
+  contador = 0                #Aca hago un loop o box empezando por 0 porque no encontre ninguno.
+  numero = 2                  #Otro loop en donde digo que el contador empiece por el numero 2 ya que es el primer primo en esta funcion. (UNO NO ES PRIMO).
+
+  while True:                 #Condicion de esta funcion empieza con este bucle infinito hasta que.
+    if es_numero_primo(numero):  #Si la condicion es primo, va a usar la prinmera funcion 'es_numero_primo' que hice para confirmarlo.
+      contador += 1          #Aca, si el numero es primo, agrego 1 al contador para saber que aca hay un numero primo.
+  
+      if contador == N:     #Condicion de que si el numero de primos que encontré es igual al 'N' solicitado, entonces
+        return numero       #encontre una cantidad de primos solicitados, va a devolver el ultimo que encontró.
+    numero += 1             #Si no encontró un numero primo, aumento el valor de 'numero' en 1 para avanzar con el siguiente numero y revisar si es primo. Reinicia el bucle de revision.
+
+print (once_primo(N)) #Me daria el enesimo numero primo del N
