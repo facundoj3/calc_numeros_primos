@@ -21,3 +21,5 @@ def once_primo(N):            #Aca, otra receta con el nombre "once_primo" que v
     numero += 1             #Si no encontró un numero primo, aumento el valor de 'numero' en 1 para avanzar con el siguiente numero y revisar si es primo. Reinicia el bucle de revision.
 
 print (once_primo(N)) #Me daria el enesimo numero primo del N
+
+
