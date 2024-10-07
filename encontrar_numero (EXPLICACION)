@@ -1,0 +1,85 @@
+### 1. `import math`
+Se importa la librería `math` para utilizar la función `math.sqrt`, que nos permitirá calcular la raíz cuadrada de números de manera eficiente.
+
+### 2. `def enesimo_primo(enesimo_primo, devolver_string_o_lista=0):`
+Se define la función `enesimo_primo`. Esta función toma dos argumentos:
+- `enesimo_primo`: Es el número enésimo primo que queremos obtener.
+- `devolver_string_o_lista`: Controla el formato de la respuesta (número, lista o mensaje).
+
+### 3. `try: int(enesimo_primo)`
+Se intenta convertir el argumento `enesimo_primo` a un número entero. Si el valor ingresado no es un número válido, el código arroja un error.
+
+### 4. `except: return "El valor ingresado no es un número"`
+Si el valor ingresado no puede convertirse a número, la función devuelve un mensaje de error.
+
+### 5. `if not int(enesimo_primo) == enesimo_primo:`
+Aquí se comprueba si el número es un decimal. Si lo es, lo redondea hacia abajo y muestra un mensaje indicando el redondeo.
+
+### 6. `if enesimo_primo < 0:`
+Si el número introducido es negativo, se convierte en positivo y se muestra un mensaje explicando el cambio.
+
+### 7. `enesimo_primo -= 1`
+Se resta 1 al número enésimo porque las listas en Python comienzan desde el índice 0.
+
+### 8. `numero = 1`
+Inicializamos la variable `numero` en 1. Comenzamos a buscar números primos desde 2.
+
+### 9. `agregar = True`
+Creamos una variable de control llamada `agregar`, que nos ayudará a decidir si un número es primo o no.
+
+### 10. `lista_primos = []`
+Se crea una lista vacía donde se almacenarán los números primos encontrados.
+
+### 11. `while len(lista_primos) <= enesimo_primo:`
+Se inicia un bucle que continúa hasta que se haya encontrado el número enésimo primo.
+
+### 12. `numero += 1`
+Incrementamos `numero` para probar si el siguiente número es primo.
+
+### 13. `raiz_numero = int(math.sqrt(numero) + 1)`
+Calculamos la raíz cuadrada del número para optimizar la verificación de si es primo.
+
+### 14. `for i in lista_primos:`
+Iteramos sobre los primos ya encontrados, que están almacenados en `lista_primos`.
+
+### 15. `if i < raiz_numero:`
+Solo se verifican los números primos menores que la raíz cuadrada del número actual, para mejorar la eficiencia.
+
+### 16. `if numero % i == 0:`
+Si `numero` es divisible por alguno de los primos, significa que no es primo.
+
+### 17. `agregar = False`
+Si encontramos un divisor, cambiamos `agregar` a `False` para no agregar el número a la lista de primos.
+
+### 18. `if agregar == True:`
+Si el número no es divisible por ninguno de los primos, significa que es primo. Lo agregamos a `lista_primos`.
+
+### 19. `if devolver_string_o_lista == 2:`
+Si se eligió devolver una lista (`devolver_string_o_lista == 2`), se devuelve la lista completa de primos.
+
+### 20. `elif devolver_string_o_lista == 0:`
+Si se eligió devolver solo el enésimo número primo (`devolver_string_o_lista == 0`), se devuelve el número primo correspondiente.
+
+### 21. `else:`
+Si se eligió devolver un mensaje, se devuelve un texto que dice cuál es el enésimo número primo.
+
+## Uso del Código
+
+Puedes llamar a la función `enesimo_primo` con diferentes parámetros para obtener el enésimo número primo o una lista de primos. Aquí hay algunos ejemplos:
+
+```python
+# Ejemplo 1: Obtener el 5° número primo
+print(enesimo_primo(5))  # Devuelve 11
+
+# Ejemplo 2: Obtener una lista de los primeros 5 primos
+print(enesimo_primo(5, 2))  # Devuelve [2, 3, 5, 7, 11]
+
+# Ejemplo 3: Devolver un mensaje con el enésimo primo
+print(enesimo_primo(5, 1))  # Devuelve "El 5° número primo es 11"
+
+
+
+
+
+
+:v
