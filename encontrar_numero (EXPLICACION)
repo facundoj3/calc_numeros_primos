@@ -3,8 +3,8 @@ Se importa la librería `math` para utilizar la función `math.sqrt`, que nos pe
 
 ### 2. `def enesimo_primo(enesimo_primo, devolver_string_o_lista=0):`
 Se define la función `enesimo_primo`. Esta función toma dos argumentos:
-- `enesimo_primo`: Es el número enésimo primo que queremos obtener.
-- `devolver_string_o_lista`: Controla el formato de la respuesta (número, lista o mensaje).
+    - `enesimo_primo`: Es el número enésimo primo que queremos obtener.
+    - `devolver_string_o_lista`: Controla el formato de la respuesta (número, lista o mensaje).
 
 ### 3. `try: int(enesimo_primo)`
 Se intenta convertir el argumento `enesimo_primo` a un número entero. Si el valor ingresado no es un número válido, el código arroja un error.
